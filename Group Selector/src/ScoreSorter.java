@@ -1,7 +1,7 @@
 import java.util.Comparator;
-public class ScoreSorter implements Comparator <students>
+public class ScoreSorter implements Comparator <Students>
 	{
-	public int compare (students s1, students s2)
+	public int compare (Students s1, Students s2)
 		{
 		if ( s1.getScore()<s2.getScore())
 		{

@@ -9,33 +9,49 @@ public class groupCreator
 	{
 	
 
-	static ArrayList<students> classRoster = new ArrayList<students>();
+	static ArrayList<Students> classRoster = new ArrayList<Students>();
 	public static void main(String[] args) throws IOException
 		{
 		
 		 Scanner file = new Scanner( new File( "classroster.txt" ) );
 		
 		 int numberOfPeople=file.nextInt();
+		 
 		 for(int i=0;i<numberOfPeople;i++)
 			 {
 			  String firstName=file.next();
 			  String lastName=file.next();
 			  double score=file.nextDouble();
-			 classRoster.add(new students(firstName,lastName,score));
+			 classRoster.add(new Students(firstName,lastName,score));
 			 
 			  
-			 //System.out.println(groupCreator);
-			// System.out.print(file.next()+" ");
-			// System.out.println(file.next());
-			// System.out.println(file.nextInt());
-			// System.out.println(students.getFirstName());
+			
 			 }
 		 
+		 Scanner input = new Scanner(System.in);
+		 System.out.println("How many groups are there:");
+		 int numberOfGroups=input.nextInt();
+		 System.out.println();
 		 
-		
 		 Collections.sort(classRoster,new ScoreSorter());
 		 
 		 Collections.sort(classRoster,new NameSorter());
+		 
+		 
+		 public static void counter();
+		 {
+			 int counter=1;
+			 for(int k=0;k<numberOfPeople;k++)
+			 {
+				 Students.get(k).setStudents(counter);
+				 if (counter<numberOfGroups){
+					 counter++;
+				 }else{
+					 counter=1;
+				 }
+			 }
+		 }
+		
 		 
 		 
 		 
@@ -69,9 +85,9 @@ public class groupCreator
 
 		}
 	@Override
-	public String toString()
-		{
-		return "groupCreator []";
-		}
+	public String toString() {
+		return "groupCreator [getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
+	}
 
 	}
