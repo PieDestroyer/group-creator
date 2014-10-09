@@ -38,20 +38,20 @@ public class groupCreator
 		 Collections.sort(classRoster,new NameSorter());
 		 
 		 
-		 public static void counter();
-		 {
-			 int counter=1;
-			 for(int k=0;k<numberOfPeople;k++)
-			 {
-				 Students.get(k).setStudents(counter);
-				 if (counter<numberOfGroups){
-					 counter++;
-				 }else{
-					 counter=1;
-				 }
-			 }
-		 }
-		
+//		 public static void counter();
+//		 {
+//			 int counter=1;
+//			 for(int k=0;k<numberOfPeople;k++)
+//			 {
+//				 Students.get(k).setStudents(counter);
+//				 if (counter<numberOfGroups){
+//					 counter++;
+//				 }else{
+//					 counter=1;
+//				 }
+//			 }
+//		 }
+//		
 		 
 		 
 		 
